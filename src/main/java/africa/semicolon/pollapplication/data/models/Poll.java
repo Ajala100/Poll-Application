@@ -50,10 +50,10 @@ public class Poll {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public Poll(String question, List<Option> options, AppUser pollCreator){
+    public Poll(String question, List<Option> listOfOptions, AppUser pollCreator){
 
         this.question = question;
-        this.options = options;
+        this.options = listOfOptions;
         this.pollCreator = pollCreator;
     }
 }
