@@ -50,7 +50,7 @@ public class AppUser{
 
     @Column(unique = true)
     @Size(max = 11)
-    @NotBlank(message = "Phone number cannot be blank")
+    @NotBlank(message = "User phone number cannot be blank")
     private String phoneNumber;
 
     @JsonIgnore
