@@ -22,7 +22,7 @@ public class Option {
     private Long id;
 
 
-    @NotBlank(message = "value cannot be blank")
+    @NotBlank(message = "Option value cannot be blank")
     private String value;
 
     @JsonIgnore
