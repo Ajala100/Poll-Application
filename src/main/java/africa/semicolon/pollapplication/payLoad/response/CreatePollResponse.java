@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class CreatePollResponse {
-    private Long pollId;
-    private Long pollCreatorId;
+    private String pollId;
+    private String pollCreatorId;
     private String question;
     private List<Option> options;
     private int commentCount;
