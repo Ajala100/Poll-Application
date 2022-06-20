@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 
 public class CreatePollCommentResponse {
     private Long pollCommentId;
-    private Long pollId;
+    private String pollId;
     private String comment;
-    private Long commenterId;
+    private String commenterId;
     private LocalDateTime createdAt;
 }
