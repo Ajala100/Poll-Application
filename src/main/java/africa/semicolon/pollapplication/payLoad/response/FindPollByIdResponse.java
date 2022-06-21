@@ -13,8 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class FindPollByIdResponse {
-    private Long pollId;
-    private Long pollCreatorId;
+    private String pollId;
+    private String pollCreatorId;
     private String question;
     private List<Option> options;
     private int commentCount;
@@ -24,7 +24,7 @@ public class FindPollByIdResponse {
     private List<CreatePollCommentResponse> pollComments;
 
 
-    public FindPollByIdResponse(Long pollId, Long pollCreatorId, String question, List<Option> options, int commentCount,
+    public FindPollByIdResponse(String pollId, String pollCreatorId, String question, List<Option> options, int commentCount,
                                 int likeCount, int dislikeCount, List<CreatePollCommentResponse> pollComments){
         this.pollId = pollId;
         this.pollCreatorId = pollCreatorId;
