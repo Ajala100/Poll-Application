@@ -9,6 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PollDislikeRepository extends JpaRepository<PollDislike, Long> {
-    Optional<PollDislike> findPollDislikeByPollAndDisliker(Poll poll, AppUser disliker);
+    Optional<PollDislike> findPollDislikeByDislikerAndPoll(AppUser disliker, Poll poll);
     Optional<List<PollDislike>> findPollDislikeByDisliker(AppUser disliker);
 }
