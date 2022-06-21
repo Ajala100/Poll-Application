@@ -11,13 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 public interface PollService {
-    CreatePollResponse createPoll(Long pollCreatorId, CreatePollRequest createPollRequest  ) throws UserDoesNotExistException, InvalidOptionAmountException;
-    void deletePollById(Long pollId);
-    List<CreatePollResponse> findPollByCreatorId(Long pollCreatorId) throws PollDoesNotExistException;
-    FindPollByIdResponse findPollById(Long pollId) throws PollDoesNotExistException, PollHasExpiredException;
+    CreatePollResponse createPoll(String pollCreatorId, CreatePollRequest createPollRequest  ) throws UserDoesNotExistException, InvalidOptionAmountException;
+    void deletePollById(String pollId);
+    List<CreatePollResponse> findPollByCreatorId(String pollCreatorId) throws PollDoesNotExistException;
+    FindPollByIdResponse findPollById(String pollId) throws PollDoesNotExistException, PollHasExpiredException;
     List<CreatePollResponse> findAllAvailablePolls();
     void checkPollStatus();
-    Map<Option, String> selectOptions(Long userId, Long pollId, Long optionId) throws PollDoesNotExistException, OptionDoesNotExistException, PollHasExpiredException, UserDoesNotExistException, OptionHasAlreadyBeenSelectedException;
-    PollLikeAndUnlikeResponse likeAndUnlikePoll(Long pollId, Long userId) throws UserDoesNotExistException, PollDoesNotExistException;
+    Map<Option, String> selectOptions(String userId, String pollId, Long optionId) throws PollDoesNotExistException, OptionDoesNotExistException, PollHasExpiredException, UserDoesNotExistException, OptionHasAlreadyBeenSelectedException;
+    PollLikeAndUnlikeResponse likeAndUnlikePoll(String pollId, String userId) throws UserDoesNotExistException, PollDoesNotExistException;
 
 }
