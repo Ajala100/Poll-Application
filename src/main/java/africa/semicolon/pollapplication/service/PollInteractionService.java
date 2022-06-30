@@ -10,8 +10,8 @@ import africa.semicolon.pollapplication.payLoad.response.PollInteractionResponse
 import java.util.List;
 
 public interface PollInteractionService {
-    PollInteractionResponse findPollInteractionByUserAndPoll(Long userId, Long pollId) throws UserDoesNotExistException, PollDoesNotExistException, PollInteractionDoesNotExist;
-    List<FindPollInteractionByUserResponse> findPollInteractionByUser(Long userId) throws UserDoesNotExistException, PollInteractionDoesNotExist;
-    List<FindPollInteractionByPollResponse> findPollInteractionByPoll(Long pollId) throws PollDoesNotExistException, PollInteractionDoesNotExist;
+    PollInteractionResponse findPollInteractionByUserAndPoll(String userId, String pollId) throws UserDoesNotExistException, PollDoesNotExistException, PollInteractionDoesNotExist;
+    List<FindPollInteractionByUserResponse> findPollInteractionByUser(String userId) throws UserDoesNotExistException, PollInteractionDoesNotExist;
+    List<FindPollInteractionByPollResponse> findPollInteractionByPoll(String pollId) throws PollDoesNotExistException, PollInteractionDoesNotExist;
 
 }
