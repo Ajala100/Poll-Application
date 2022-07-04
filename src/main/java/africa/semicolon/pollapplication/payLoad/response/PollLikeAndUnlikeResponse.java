@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 @ToString
 public class PollLikeAndUnlikeResponse {
     private Long id;
-    private Long userId;
-    private Long pollId;
+    private String userId;
+    private String pollId;
     private LocalDateTime createdAt;
 
 }
