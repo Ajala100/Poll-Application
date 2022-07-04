@@ -12,6 +12,6 @@ import lombok.*;
 public class FindPollInteractionByUserResponse {
 
     private Long pollInteractionId;
-    private Long pollId;
+    private String pollId;
     private Long optionId;
 }
