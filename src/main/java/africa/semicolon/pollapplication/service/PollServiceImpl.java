@@ -31,6 +31,7 @@ public class PollServiceImpl implements PollService{
     private final PollLikeRepository likeRepository;
     private final PollDislikeRepository pollDislikeRepository;
     private final PollInteractionRepository pollInteractionRepository;
+    private final PollCommentService pollCommentService;
 
     private static final Logger logger = LoggerFactory.getLogger(PollServiceImpl.class);
 
@@ -315,6 +316,16 @@ public class PollServiceImpl implements PollService{
 
             return pollDislikeService.createPollDisLike(retrievedPoll, retrievedUser);
         }
+    }
+
+    @Override
+    public CreatePollCommentResponse commentOnaPoll(String commenterId, String pollId, String comment) throws UserDoesNotExistException, PollDoesNotExistException {
+
+        if(commenterId == null) throw new IllegalArgumentException("Commenter Id cannot be null");
+        if(pollId == null) throw new IllegalArgumentException("Poll id cannot be null");
+        if(comment == null) throw new IllegalArgumentException("comment cannot be null");
+
+        return pollCommentService.createPollComment(commenterId, pollId, comment);
     }
 
     private Map<Option, String> createPieChart(Poll poll){
